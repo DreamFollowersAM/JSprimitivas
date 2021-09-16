@@ -21,6 +21,15 @@ function crearCajas() {
   var border = document.getElementById("border").value;
   var clr = document.getElementById("clr").value;
 
+  if(num < 1){
+      num = 1;
+      document.getElementById("num").value = num
+  }
+  if(px < 1){
+    px = 1;
+    document.getElementById("px").value = px
+    }
+
   var res = "";
 
   for (var i = 0; i < num; i++) {
