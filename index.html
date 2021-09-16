@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #ej1, #ej2{
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center; 
+            justify-content: center;
+        }
+    </style>
+
+    <title>PRIMITIVAS JS</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JAVASCRIPT - DREAM FOLLOWERS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+          <ul class="navbar-nav d-flex flex-row me-1">
+            <li class="nav-item me-3 me-lg-0">
+              <a
+                class="nav-link"
+                href="https://www.instagram.com/_dream_followers_am/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a
+                class="nav-link"
+                href="https://twitter.com/_DreamFollowers"
+                target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid w-100 mt-5 pt-3">
+      <div class="tab-content w-100 shadow-lg">
+        <div
+          class="tab-pane fade show bg-white text-dark active"
+          id="section-one"
+        >
+          <div class="row">
+            <div class="w-100">
+              <ul class="nav nav-tabs flex-column">
+                <li>
+                  <a
+                    href="#heading-one"
+                    class="nav-link bg-primary text-white active"
+                    data-toggle="tab"
+                    >Ejercicio 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#heading-two"
+                    class="nav-link bg-primary text-white my-1"
+                    data-toggle="tab"
+                    >Ejercicio 2</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-100">
+              <div class="tab-content flex-center">
+                <div class="tab-pane fade show active" id="heading-one">
+                  <div class="card text-center shadow-lg w-75 m-auto">
+                    <div class="card-body">
+                      <h5 class="card-title">Creador de cajas</h5>
+                      <div class="form-group mb-4">
+                        <label for="num">Numero de cajas</label>
+                        <input
+                          type="number"
+                          id="num"
+                          class="form-control"
+                          value="1"
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="num">Grosor de linea</label>
+                        <input
+                          type="number"
+                          id="px"
+                          class="form-control"
+                          value="1"
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="border">Tipo de linea</label>
+                        <select class="form-control" id="border">
+                          <option value="dotted">dotted</option>
+                          <option value="dashed">dashed</option>
+                          <option value="solid">solid</option>
+                          <option value="double">double</option>
+                          <option value="groove">groove</option>
+                          <option value="ridge">ridge</option>
+                          <option value="inset">inset</option>
+                          <option value="outset">outset</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="clr">Color del borde</label>
+                        <input type="color" id="clr" class="form-control" />
+                      </div>
+
+                      <button type="button" class="btn btn-primary" onclick="crearCajas()">
+                        Crear cajas
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="w-75 m-auto" id="ej1">
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade show" id="heading-two">
+                  <div class="card text-center shadow-lg w-75 m-auto">
+                    <div class="card-body">
+                      <h5 class="card-title">Encuesta</h5>
+                      <div class="form-group mb-4">
+                        <label id="p1"></label>
+                        <select class="form-control" id="r1">
+                          <option value="PC">PC</option>
+                          <option value="laptop">Laptop</option>
+                          <option value="tablet">Tablet</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label id="p2"></label>
+                        <select class="form-control" id="r2">
+                          <option value="Entretenimiento">Entretenimiento</option>
+                          <option value="Escuela">Escuela</option>
+                          <option value="Trabajo">Trabajo</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label id="p3"></label>
+                        <select class="form-control" id="r3">
+                          <option value="recientemente">recientemente</option>
+                          <option value="hace mucho">hace mucho</option>
+                          <option value="nunca">nunca</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label id="p4"></label>
+                        <select class="form-control" id="r4">
+                          <option value="sí">sí</option>
+                          <option value="quizá luego">quizá luego</option>
+                          <option value="nunca">nunca</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label id="p5"></label>
+                        <select class="form-control" id="r5">
+                          <option value="diario">diario</option>
+                          <option value="ocasionalmente">ocasionalmente</option>
+                          <option value="rara vez">rara vez</option>
+                        </select>
+                      </div>
+
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="verResumen()">
+                        Ver resumen
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Resumen de la Encuesta</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="resmn"></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-4">
+        <section class="mb-3">
+          <p>
+            Practicas de javascript desarrolladas para la materia de frameworks
+            en el grupo EVN401, en la carrera Entornos Virtuales y Negocios
+            Digitales de la Universidad Tecnologica de Leon, bajo la mentoria de
+            la profesora Anahi Torres Tinoco.
+          </p>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a
+          class="text-white"
+          href="https://www.instagram.com/_dream_followers_am/"
+          target="_blank"
+          >Dream Followers</a
+        >
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
